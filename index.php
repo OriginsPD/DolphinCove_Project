@@ -249,14 +249,7 @@
                 <a href="logout.php">Logout</a>
             </div>
             <div class="print">
-                <button><i class="fa fa-print"> </i> Print</button>
-                <script>
-                    var btn = document.querySelector("button");
-                    btn.onclick = () => {
-                            window.print();
-                        }
-
-                </script>
+                <button onclick="window.print()"><i class="fa fa-print"> </i> Print</button>
             </div>
         </div>
     </body>
