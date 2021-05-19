@@ -14,7 +14,7 @@
             <div class="container">
                 <article>
                     <h1>ABOUT ME</h1>
-                    <img src= "me22.png">
+                    <img src= "me22.PNG">
                     <blockquote>
                         I am a talented, ambitious and hardworking individual, with broad skills and experience in Information
                          Technology such as Computer Repairs and System Adminstration.<br>
