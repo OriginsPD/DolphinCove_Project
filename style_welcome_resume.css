@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+}
+.print-area
+{
+    width: 80%;
+    margin: 2% auto;
+}
+.print-area .header{
+    width:100%;
+    height: 140px;
+    background-color: #ff4584;
+    display:flex;       
+    align-items: center;
+    position: relative;
+}
+.header img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left:58px;
+    border:5px solid white;
+    box-shadow: 3px 3px 10px rgba(0,0,0,.5);
+    cursor: pointer;
+    transition: .5s;
+    user-select: none;
+    filter: grayscale(100%);
+    
+}
+.header img:hover 
+{
+filter: grayscale(0%);
+transform: scale(1.05);
+box-shadow:3px 3px 10px rgba(0,0,0,.5);
+}
+.header-text{
+    color: white;
+    width:60%;
+    margin-left:auto;
+}
+.header-text h1{
+    font-size:50px;
+    font-weight: normal;
+    margin-right: 30px;
+}
+.header-text p{
+    font-size: 20px;
+    color: lightgray;
+}
+.content{
+    display: flex;
+    flex-wrap:wrap;
+}
+.left-area{
+    width:30%; 
+    background-color: rgb(236,236,236);
+    text-align: center;
+    padding-bottom: 20px;
+}
+.left-area .contact{
+   margin-top: 100px;
+   padding: 10px 30px ; 
+  
+}
+.contact h4{
+    font-size: 30px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+.contact h5{
+font-size: 18px;
+margin: 10px 0;
+}
+.contact p{
+    font-size: 17px;
+}
+.skills{
+    margin-top: 30px;
+}
+.skills h1{
+    font-size: 30px;
+    font-weight: normal;
+}
+.bars{
+   margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px 10px;
+}
+.bars .bar p{
+    font-size:15px;
+    font-weight: bold;
+}
+.bar span{
+display: block;
+width: 100%;
+height: 10px;
+background-color: rgb(193,191,191);
+margin-top: 10px;
+border-radius: 10px;
+position: relative;
+}
+.bar span::before{
+    position: absolute ;
+    content:"";
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+
+}
+.interest h1{
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: normal;  
+}
+.interest p{
+    font-size: 17px;
+    margin: 80px ;
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 4px;
+}
+.project h1{
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: normal;  
+}
+.project p{
+    font-size: 17px;
+    margin-left: 20px ;
+    margin-top: 20px;
+    text-align:justify;
+
+}
+.ref h1{
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: normal;  
+}
+.ref ol li{
+    font-size: 17px;
+    margin: 0px ;
+    margin-top: 20px;
+    text-align: left;
+    padding-right: 10px;
+    margin-left: 50px;
+}
+.right-area{
+    width:70%;
+    padding: 20px;
+}
+.right-area h1{
+    font-size:25px;
+    font-weight:normal;
+}
+.right-area h1 span{
+    margin-right: 10px;
+    font-size:50px;
+    color: #ff4584;
+}
+.right-area p{
+    padding-left: 55px;
+    text-align: justify;
+    font-size: 17px;
+    color: gray;
+    margin-top: 10px;
+}
+.education .edu-group{
+    position: relative;
+}
+.education .edu-group p{
+    padding-left: 55px;
+    text-align: justify;
+    font-size: 17px;
+    color: gray;
+    margin-top: 10px;
+}
+.edu-group span{
+    position: absolute;
+    top:2px;
+    right: 0;
+    color:black;
+    text-align:end;
+    font-weight: bold;
+    font-size: 15px;
+}
+.qual .qual-group{
+    position: relative;
+} 
+.qual-group span{
+    position: absolute;
+    top:10px;
+    margin-top: inherit;
+    right:0;
+    color: black ;
+    font-weight: bold;
+    font-size: 15px;
+}
+.work .work-group{
+    position: relative;
+}
+.work .work-group h3{
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 55px;
+}
+.work .work-group h4{
+    font-size: 15px;
+    padding-left: 55px;
+    font-weight:bold;
+    color: gray;
+}
+.work .work-group span{
+    position: absolute;
+    top:10px;
+    margin: 0px;
+    right: 0;
+    color:black;
+    text-align:end;
+    font-weight: bold;
+    font-size: 15px;
+}
+.work .work-group ul{
+    padding-left: 55px;
+    text-align: justify;
+    font-size: 17px;
+    color: gray;
+    margin-top: 10px;
+}
+
+ button{
+    font-size: 15px;
+    padding: 10px 20px;
+    margin:inherit;
+    background-color: #ff4584;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #292425;;
+    cursor:pointer;
+    transition: .5s;
+    margin-top: 15px;
+
+}
+ .logout a{
+    text-decoration: none;
+    color:white;
+    background-color:  #ff4584;;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 3px;
+    margin-left: 40px;
+}
+button:hover{
+    background-color: black;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+}
+.print button{
+    color: white;
+    margin-left: 85%;
+    position: absolute;
+    top: 267%;
+    cursor: pointer;
+
+}
+
+@media print{
+    body* {
+        visibility: hidden;
+    }
+
+    .print-area *{
+        visibility: visible;
+    }
+    .header img
+{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 30px;
+    left:18px;
+}.work .work-group span{
+    position: absolute;
+    top:16px;
+    margin: 0px;
+    right: 0;
+    color:black;
+    text-align:end;
+    font-weight: bold;
+    font-size: 15px;
+}.print button{
+    color: white;
+    margin-left: 85%;
+    position: absolute;
+    top: 200%;
+    cursor: pointer;
+}
+}
+@media screen and (max-width: 1000px){
+    .header img
+{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 30px;
+    left:18px; 
+}
+.header-text h1{
+    font-size:40px;
+    font-weight: normal;
+    margin-right: 10px;
+}
+.content{
+    display: inline;
+}
+.right-area{
+    width:100%;
+}
+.left-area{
+    width:120%;
+
+}.left-area .contact{
+    margin-top: 0px;
+    padding: 10px 30px ; 
+ }
+ .edu-group span{
+    position: absolute;
+    top:2px;
+    right: -9%;
+    color:black;
+    text-align:end;
+    font-weight: bold;
+    font-size: 14px;
+}.qual-group span{
+    position: absolute;
+    top:30px;
+    margin-top: inherit;
+    right:0;
+    color: black ;
+    font-weight: bold;
+    font-size: 15px;
+}
+.print button{
+    color: white;
+    margin-left: 85%;
+    position: absolute;
+    top: 541%;
+    cursor: pointer;
+
+}.logout a{
+    text-decoration: none;
+    color:white;
+    background-color:  #ff4584;;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 3px;
+    margin-left: 45px;
+
+}.project p{
+    font-size: 17px;
+    margin-left: 70px ;
+    margin-top: 20px;
+}
+.interest p{
+    font-size: 17px;
+    margin: 80px ;
+    margin-top: 20px;
+    margin-left: 120px;
+    margin-bottom: 4px;
+}
+}
