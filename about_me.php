@@ -23,7 +23,7 @@
                         Recently, I completed an NVQ-J certificate, including Web Development modules at the Amber Group/HEART Trust NTA.
                     </blockquote>
                     <h5>-Angella Marston</h5>
-                    <button><a href="index.php">Learn More</a></button>
+                    <button><a href="index.php">Resume</a></button>
                 </article>
             </div>
     </body>
