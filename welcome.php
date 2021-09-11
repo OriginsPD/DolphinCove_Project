@@ -79,10 +79,10 @@
                         </div>
                         <div class="project">
                             <h1>PROJECT</h1>
-                            <p>&#10004; <b>Login Form:</b> <a href="login_form.html">view file</a><br>
-                                &#10004; <b>Time Table: </b><a href="timetable.html">view file</a><br>
-                                &#10004; <b>Student Marks Table: </b><a href="marks_table.html">view file</a><br>
-                                &#10004; <b>Fetch Data from Database: </b>&nbsp;<a href="retrieve_db.php">view file</a>
+                            <p>&#10004; <b>Login Form:</b> <a href="login_form.pdf">view file</a><br>
+                                &#10004; <b>Time Table: </b><a href="timetable.pdf">view file</a><br>
+                                &#10004; <b>Student Marks Table: </b><a href="marks_table.pdf">view file</a><br>
+                                &#10004; <b>Fetch Data from Database: </b>&nbsp;<a href="retrieve data from Database using PHP.pdf">view file</a>
                             </p>
                         </div>
                         <div class="interest">
@@ -249,7 +249,14 @@
                 <a href="logout.php">Logout</a>
             </div>
             <div class="print">
-                <button onclick="window.print()"><i class="fa fa-print"> </i> Print</button>
+                <button><i class="fa fa-print"> </i> Print</button>
+                <script>
+                    var btn = document.querySelector("button");
+                    btn.onclick = () => {
+                            window.print();
+                        }
+
+                </script>
             </div>
         </div>
     </body>
