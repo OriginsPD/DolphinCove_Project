@@ -7,39 +7,43 @@
 @section('title')
     <title>Add Company::</title>
 @endsection
-<div>
+<div >
     <h3>Add Company</h3>
     @if (session()->has('message'))
         <div class="alert alert-success">
             {{ session()->get('message') }}
         </div>
     @endif
-    <form class="form-border" action="{{ route('add-company') }}" method="post">
-        @csrf
-        <div class="custom-container">
-            <input type="text" name="company_name" placeholder="Enter company name">
-            @error('company_name')
-                <span>{{ $message }}</span>
-            @enderror
-        </div>
-        <div class="custom-container">
-            {{-- <label for="hotel_id">Hotel: </label> --}}
-            <Select class="hotel-list" name="hotel_id">
-                <option disabled selected>select hotel</option>
-                @foreach ($hotels as $hotel)
-                    <option value="{{ $hotel->id }}">{{ $hotel->hotel_name }}</option>
-                @endforeach
-            </Select>
-            @error('hotel_id')
-                <span>{{ $message }}</span>
-            @enderror
-        </div>
-        {{-- <div class="custom-container"> --}}
-            <button class="button-btn">
-                Add
-            </button>
-        {{-- </div> --}}
-    </form>
+    <div class="flex justify-center mt-10">
+
+        <form class="form-border" action="{{ route('add-company') }}" method="post">
+            @csrf
+            <div class="custom-container">
+                <input type="text" name="company_name" placeholder="Enter company name">
+                @error('company_name')
+                    <span>{{ $message }}</span>
+                @enderror
+            </div>
+            <div class="custom-container">
+                {{-- <label for="hotel_id">Hotel: </label> --}}
+                <Select class="hotel-list" name="hotel_id">
+                    <option disabled selected>select hotel</option>
+                    @foreach ($hotels as $hotel)
+                        <option value="{{ $hotel->id }}">{{ $hotel->hotel_name }}</option>
+                    @endforeach
+                </Select>
+                @error('hotel_id')
+                    <span>{{ $message }}</span>
+                @enderror
+            </div>
+            {{-- <div class="custom-container"> --}}
+                <button class="button-btn">
+                    Add
+                </button>
+            {{-- </div> --}}
+        </form>
+
+    </div>
     <div>
         <table class="rounded-t-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
             <tr class="text-left border-b-2 border-gray-300">
