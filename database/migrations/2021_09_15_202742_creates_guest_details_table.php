@@ -19,7 +19,6 @@ class CreatesGuestDetailsTable extends Migration
             $table->integer('company_id');
             $table->integer('payment_id');
             $table->integer('guest_type_id');
-            $table->timestamps();
         });
     }
 

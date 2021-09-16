@@ -18,7 +18,6 @@ class CreateProgramsTable extends Migration
             $table->string('program_name');
             $table->integer('cost');
             $table->string('excursion');
-            $table->timestamps();
         });
     }
 

@@ -16,7 +16,6 @@ class CreatesGuestTypesTable extends Migration
         Schema::create('guest_types', function (Blueprint $table) {
             $table->id();
             $table->string('type');
-            $table->timestamps();
         });
     }
 

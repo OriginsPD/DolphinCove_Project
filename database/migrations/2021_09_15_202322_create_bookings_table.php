@@ -17,7 +17,6 @@ class CreateBookingsTable extends Migration
             $table->id();
             $table->integer('guest_id');
             $table->integer('program_id');
-            $table->timestamps();
         });
     }
 

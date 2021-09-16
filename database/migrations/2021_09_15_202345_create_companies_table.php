@@ -18,7 +18,6 @@ class CreateCompaniesTable extends Migration
             $table->string('company_name');
             $table->integer('guest-count');
             $table->integer('hotel_id');
-            $table->timestamps();
         });
     }
 
