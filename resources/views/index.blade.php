@@ -16,6 +16,8 @@
             <a href="{{ route('programs.index') }}">Programs</a>
             <a href="#">About Us</a>
             <a href="#">Contact Us</a>
+            <a href="{{ url('/register') }}">Register</a>
+            <a href="{{ url('/login') }}">Login</a>
         </ul>
     </nav>
 
