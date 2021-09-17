@@ -46,7 +46,7 @@ Toast.fire({
 			<tr class="flex w-full mb-4">
         <td class="p-4 w-1/4">{{ $value->id }}</td>
 				<td class="p-4 w-1/4">{{ $value->name }}</td>
-				<td class="p-4 w-1/4">{{ $value-> }} Guest</td>
+				{{-- <td class="p-4 w-1/4">{{ $value-> }} Guest</td> --}}
 				<td class="p-4 w-1/4">{{ $value->p_type }}</td>
         <td class="p-4 w-1/4">{{ $value->hotel_name }}</td>
 				<td class="p-4 w-1/4">{{ $value->company_name }}</td>
