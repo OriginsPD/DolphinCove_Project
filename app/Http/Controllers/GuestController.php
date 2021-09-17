@@ -60,7 +60,7 @@ class GuestController extends Controller
 
                 return redirect()->route('Guest.create')->with('success', 'success');
             }
-            $save->company_id = 0;
+            $save->company_id = 999;
             $save->guest_type_id = 2;
             $save->save();
         }
