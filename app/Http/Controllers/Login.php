@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -10,7 +11,8 @@ use Illuminate\Support\Facades\Auth;
 
 class Login extends Controller
 {
-    function get_login(){
+    function get_login()
+    {
         return view('index.index');
     }
 
@@ -22,20 +24,18 @@ class Login extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
+            
+            $user = User::where('email', $request->email)->get();
 
-           $user = users::where('email',$request->email)->get();
+            session()->put('logged', 1);
+            session()->put('user', $user[0]->name);
 
-            session()->put('logged',1);
-            session()->put('user',$user[0]->name);
-
-            return redirect()->route('Admin.index')->with('login',1);
+            return redirect()->route('Admin.index')->with('login', 1);
+            
         }
 
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ]);
     }
-        
-   
 }

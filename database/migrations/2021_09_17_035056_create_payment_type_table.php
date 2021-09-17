@@ -15,7 +15,7 @@ class CreatePaymentTypeTable extends Migration
     {
         Schema::create('payment_type', function (Blueprint $table) {
             $table->id();
-            $table->string('p_type');
+            $table->string('p_type')->default('cash');
         });
     }
 

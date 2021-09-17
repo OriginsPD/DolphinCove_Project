@@ -18,7 +18,7 @@ class Guest_details extends Model
 
     public $timestamps = false;
 
-    function Company(){
+    function company(){
         return $this->belongsTo(Company::class, 'company_id');
     }
 
@@ -26,7 +26,7 @@ class Guest_details extends Model
         return $this->BelongsTo(Payment_type::class,'payment_id');
     }
 
-    public function Booking()
+    public function booking()
     {
         return $this->hasMany(Booking::class);
     }
