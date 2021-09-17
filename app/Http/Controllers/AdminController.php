@@ -25,7 +25,14 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $guest = Guest_details::orderBy('id', 'desc')->get();
+        $guest = Guest_details::join('companies', 'guest_details.company_id', '=', 'companies.id')
+        ->join('payment_types', 'guest_details.payment_id', '=', 'payment_types.id')
+        ->join('guest_types', 'guest_details.guest_type_id', '=', 'guest_types.id')
+        ->join('hotels', 'companies.hotel_id', '=', 'hotels.id')
+        ->orderBy('guest_details.id', 'desc')
+        ->get();
+
+        
     
         return view('admin.index', compact('guest'));
     }

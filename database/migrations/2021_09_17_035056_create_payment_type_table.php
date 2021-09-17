@@ -13,9 +13,9 @@ class CreatePaymentTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('payment_type', function (Blueprint $table) {
-            $table->id();
-            $table->string('p_type')->default('cash');
+        Schema::create('payment_types', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('p_type');
         });
     }
 

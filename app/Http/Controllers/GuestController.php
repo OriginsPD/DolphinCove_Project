@@ -57,21 +57,17 @@ class GuestController extends Controller
         if ($request) {
             $save = new Guest_details;
             $save->name = $request->guest_name;
-            if($request->company_id != 'Walk-In')
-            {
-                $save->company_id = $request->company_id;
-                $save->payment_id = 2;
-                $save->guest_type_id = 1;
+            $save->company_id = $request->company_id;
+            $save->payment_id = 2;
+            $save->guest_type_id = 1;
 
-                Company::find($request->company_id)->increment('guest-count');
+            Company::find($request->company_id)->increment('guest-count');
 
-                $save->save();
-
-                return redirect()->route('Guest.create')->with('success', 'success');
-            }
-            $save->company_id = 999;
-            $save->guest_type_id = 2;
             $save->save();
+
+            return redirect()->route('Guest.create')->with('success', 'success');
+            
+            
         }
 
         return redirect()->route('Guest.create')->with('success', 'success');

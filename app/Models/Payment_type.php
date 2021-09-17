@@ -10,7 +10,7 @@ class Payment_type extends Model
     use HasFactory;
 
     protected $fillable = [
-        'type',
+        'p_type',
     ];
 
     public $timestamps = false;

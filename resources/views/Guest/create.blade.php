@@ -40,7 +40,7 @@
           <div class="mb-5 relative">
             <select name="company_id" id="company" class="peer pt-8 border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16 placeholder-transparent appearance-none" >
               <option disabled selected >Select From Below</option>
-              <option value="Walk-In"> Walk-In </option>
+              {{-- <option value="Walk-In"> Walk-In </option> --}}
               @foreach ($companies as $company)
                   <option value="{{ $company->id }}">{{ $company->company_name }}</option>
               @endforeach

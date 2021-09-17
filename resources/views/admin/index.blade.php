@@ -29,7 +29,6 @@ Toast.fire({
 	<table class="text-left w-full shadow-xl border-2">
 		<thead class="bg-gray-500 text-center rounded-t-xl flex text-white w-full">
 			<tr class="flex w-full mb-4">
-				<th class="p-4 w-1/4">id</th>
 				<th class="p-4 w-1/4">Name</th>
 				<th class="p-4 w-1/4">Guest Type</th>
         <th class="p-4 w-1/4">Payment Method</th>
@@ -44,13 +43,25 @@ Toast.fire({
       {{-- {{ dd($value) }} --}}
           
 			<tr class="flex w-full mb-4">
-        <td class="p-4 w-1/4">{{ $value->id }}</td>
 				<td class="p-4 w-1/4">{{ $value->name }}</td>
-				{{-- <td class="p-4 w-1/4">{{ $value-> }} Guest</td> --}}
-				<td class="p-4 w-1/4">{{ $value->p_type }}</td>
+				<td class="p-4 w-1/4">
+          @if($value->hotel_name === "None")
+            Walk-In
+          @else
+            {{ $value->g_type }}
+          @endif
+           Guest
+          </td>
+				<td class="p-4 w-1/4">
+          @if($value->hotel_name === "None")
+            Cash
+          @else
+            {{ $value->p_type }}
+          @endif
+        </td>
         <td class="p-4 w-1/4">{{ $value->hotel_name }}</td>
 				<td class="p-4 w-1/4">{{ $value->company_name }}</td>
-				<td class="p-4 w-1/4"> <button class="px-5  py-2 text-blue-500 ">View</button>
+				<td class="p-4 w-1/4"><button class="px-5  py-2 text-blue-500 ">View</button>
         </td>
 			</tr>
       @endforeach

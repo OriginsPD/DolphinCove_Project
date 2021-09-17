@@ -18,15 +18,15 @@ class Guest_details extends Model
 
     public $timestamps = false;
 
-    function company(){
+    function Company(){
         return $this->belongsTo(Company::class, 'company_id');
     }
 
-    public function payment_type(){
+    public function Payment_type(){
         return $this->BelongsTo(Payment_type::class,'payment_id');
     }
 
-    public function booking()
+    public function Booking()
     {
         return $this->hasMany(Booking::class);
     }
