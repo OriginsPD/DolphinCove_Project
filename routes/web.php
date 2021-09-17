@@ -24,7 +24,7 @@ use App\Http\Controllers\WelcomeController;
 */
 
 Route::get('/', function () {
-    return view('index.index');;
+    return view('index.index');
 });
 
 /* ////////////////////////LOGIN CONTROLLER//////////////////////// */
@@ -37,7 +37,7 @@ Route::post('/login/store', [Login::class, 'set_login'])->name('login.store');
 Route::get('/register', [Register::class, 'get_register'])->name('register');
 Route::post('/register/store', [Register::class, 'set_register'])->name('register.store');
 
-Route::group(['middleware' => 'protected'],function () {
+
        
     /* ////////////////////////RESOURCES CONTROLLERS//////////////////////// */
     Route::resource('Admin', AdminController::class);
@@ -49,4 +49,3 @@ Route::group(['middleware' => 'protected'],function () {
     
     /* ////////////////////////LOGOUT CONTROLLER//////////////////////// */
     Route::get('/logout', [logout::class, 'logout'])->name('logout.exits');
-});

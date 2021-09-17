@@ -10,18 +10,22 @@ use App\Models\Guest_details;
 class AdminController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $guest = Guest_details::join('companies', 'guest_details.company_id' ,'=', 'companies.id')
-        ->join('payment_type','guest_details.payment_id','=','payment_type.id')
-        ->join('guest_types','guest_details.guest_type_id','=','guest_types.id')
-        ->join('hotels','companies.hotel_id','=','hotels.id')
-        ->orderBy('guest_details.id', 'desc')
-        ->get();
+        $guest = Guest_details::orderBy('id', 'desc')->get();
     
         return view('admin.index', compact('guest'));
     }

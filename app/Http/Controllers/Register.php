@@ -19,6 +19,7 @@ class Register extends Controller
 
             'name' => 'required|string',
             'email' => 'required|email',
+            'user_type' => 'required',
             'password' => 'required|min:8',
         ]);
 
@@ -26,10 +27,11 @@ class Register extends Controller
         ->insert([
             'name' => $request->name,
             'email' => $request->email,
+            'user_type' => $request->user_type,
             'email_verified_at' => now(),
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect('/');
+        return redirect('/login');
     }
 }

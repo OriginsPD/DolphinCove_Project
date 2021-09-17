@@ -42,6 +42,15 @@
                                 name="password" type="password" placeholder="Enter Password" />  
                                 @error('password') <span class="text-sm text-red-600">{{ $message }}</span> @enderror                          
                         </div>                       
+                        <div class="mb-4">
+                            <select class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                name="user_type">
+                                <option disabled selected>Choose User Type</option>
+                                <option value="admin">Admin</option>
+                                <option value="agent">Customer Service Agent</option>
+                            </select>  
+                                @error('password') <span class="text-sm text-red-600">{{ $message }}</span> @enderror                          
+                        </div>                       
                         <div class="mb-6 text-center">
                             <button
                                 class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"

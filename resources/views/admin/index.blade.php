@@ -39,14 +39,14 @@ Toast.fire({
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-
 		<tbody class="bg-gray-200 flex flex-col items-center justify-between overflow-y-scroll w-full text-center" style="height: 50vh;">
       @foreach ($guest as $value )
+      {{-- {{ dd($value) }} --}}
           
 			<tr class="flex w-full mb-4">
         <td class="p-4 w-1/4">{{ $value->id }}</td>
 				<td class="p-4 w-1/4">{{ $value->name }}</td>
-				<td class="p-4 w-1/4">{{ $value->g_type }} Guest</td>
+				<td class="p-4 w-1/4">{{ $value-> }} Guest</td>
 				<td class="p-4 w-1/4">{{ $value->p_type }}</td>
         <td class="p-4 w-1/4">{{ $value->hotel_name }}</td>
 				<td class="p-4 w-1/4">{{ $value->company_name }}</td>
