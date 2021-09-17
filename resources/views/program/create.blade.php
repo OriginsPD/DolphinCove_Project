@@ -10,7 +10,7 @@
 <script>
     Swal.fire({
   position: 'top-end',
-  title: 'Hotal Added Succesful',
+  title: 'Program Added Succesful',
   showConfirmButton: false,
   timer: 1500
 })

@@ -22,6 +22,9 @@ class AdminController extends Controller
         ->join('hotels','companies.hotel_id','=','hotels.id')
         ->orderBy('guest_details.id', 'desc')
         ->get();
+
+       
+
     
         return view('admin.index', compact('guest'));
     }
