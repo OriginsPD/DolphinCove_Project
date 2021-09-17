@@ -6,6 +6,7 @@ use App\Models\Booking;
 use App\Models\Company;
 use Illuminate\Http\Request;
 use App\Models\Guest_details;
+use Database\Seeders\GuestSeeder;
 
 class AdminController extends Controller
 {
@@ -61,12 +62,21 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $name
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($name)
     {
-        return view('admin.show');
+        $guest = Guest_details::where('name',$name)
+        ->join('bookings', 'guest_details.id', '=', 'bookings.guest_id')
+        ->join('companies', 'guest_details.company_id', '=', 'companies.id')
+        ->join('payment_types', 'guest_details.payment_id', '=', 'payment_types.id')
+        ->join('guest_types', 'guest_details.guest_type_id', '=', 'guest_types.id')
+        ->join('hotels', 'companies.hotel_id', '=', 'hotels.id')
+        // ->orderBy('guest_details.id', 'desc')
+        ->first();
+        dd($guest);
+        return view('admin.show', compact($guest));
     }
 
     /**

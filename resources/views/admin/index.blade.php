@@ -61,7 +61,10 @@ Toast.fire({
         </td>
         <td class="p-4 w-1/4">{{ $value->hotel_name }}</td>
 				<td class="p-4 w-1/4">{{ $value->company_name }}</td>
-				<td class="p-4 w-1/4"><button class="px-5  py-2 text-blue-500 ">View</button>
+				<td class="p-4 w-1/4">
+          <a href="{{ route('Admin.show',$value->name) }}">
+            <button class="px-5 py-2 text-blue-500">View</button>
+          </a>
         </td>
 			</tr>
       @endforeach
