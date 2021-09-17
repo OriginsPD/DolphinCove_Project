@@ -16,7 +16,7 @@ class CreateCompaniesTable extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->string('company_name');
-            $table->integer('guest-count');
+            $table->integer('guest_count')->nullable();
             $table->integer('hotel_id');
             $table->timestamps();
         });
